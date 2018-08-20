@@ -80,13 +80,34 @@ function successHandle(marriageData){
     .attr("r", function(d){
         return radiusScale(d.rate);
     })
-    .attr("fill", "url(#jon-snow)")
+    .attr("fill", function(d){
+        return "url(#" + d.state + ")"
+    })
     .on('click', function(d){
         toolTip.show(d, event.target)
-            .direction("nw");
+            .direction("n");
     }).on("mouseout", function(d, index){
         toolTip.hide(d, event.target);
     });
+
+    defs.selectAll(".state-flower-pattern")
+    .data(marriageData)
+    .enter().append("pattern")
+    .attr("class", "state-flower-pattern")
+    .attr("id", function(d) {
+        return d.state
+    })
+    .attr("height", "100%")
+    .attr("width", "100%")
+    .attr("patternContentUnits", "objectBoundingBox")
+    .append("image")
+    .attr("height", 1)
+    .attr("width", 1)
+    .attr("preserveAspectRatio", "none")
+    .attr("xmlns:xlink", "http://www.w3.org/1999/xlink")
+    .attr("xlink:href", function (d){
+        return d.image_path
+    })
 
     simulation.nodes(marriageData)
     .on('tick', ticked)
