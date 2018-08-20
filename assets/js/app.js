@@ -1,5 +1,5 @@
 // Chart params
-var svgWidth = 750;
+var svgWidth = 900;
 var svgHeight = 750;
 
 var margin ={
@@ -38,9 +38,20 @@ defs.append("pattern")
 // Scale the circles
 var radiusScale = d3.scaleSqrt().domain([5, 30]).range([10, 80])
 
+// Define combine/separate forces
+var forceXCombine = d3.forceX(width / 2).strength(0.05)
+
+var forceXSeparate = d3.forceX(function(d){
+    if (d.party === 'democrat'){
+        return 250
+    } else {
+        return 750
+    }
+}).strength(0.05)
+
 // Use the Force/prevent collisions
 var simulation = d3.forceSimulation()
-.force("x", d3.forceX(width / 2).strength(0.05))
+.force("x", forceXCombine)
 .force("y", d3.forceY(height / 2).strength(0.05))
 .force("collide", d3.forceCollide(function(d){
     return radiusScale(d.rate) + 1;
@@ -104,6 +115,21 @@ function successHandle(marriageData){
     .attr("preserveAspectRatio", "none")
     .attr("xmlns:xlink", "http://www.w3.org/1999/xlink")
     .attr("xlink:href", "wedding-rings.jpg")
+
+    // Event listeners for buttons
+    d3.select("#party").on('click', function() {
+        simulation
+        .force("x", forceXSeparate)
+        .alphaTarget(0.3)
+        .restart()
+    })
+
+    d3.select("#combine").on('click', function() {
+        simulation
+        .force("x", forceXCombine)
+        .alphaTarget(0.2)
+        .restart()
+    })
 
     simulation.nodes(marriageData)
     .on('tick', ticked)
