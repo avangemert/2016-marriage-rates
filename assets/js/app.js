@@ -23,7 +23,7 @@ var svg = d3.select("#bubble")
 var defs = svg.append("defs");
 
 defs.append("pattern")
-    .attr("id", "jon-snow")
+    .attr("id", "wedding-rings")
     .attr("height", "100%")
     .attr("width", "100%")
     .attr("patternContentUnits", "objectBoundingBox")
@@ -32,7 +32,7 @@ defs.append("pattern")
     .attr("width", 1)
     .attr("preserveAspectRatio", "none")
     .attr("xmlns:xlink", "http://www.w3.org/1999/xlink")
-    .attr("xlink:href", "snow.jpg")
+    .attr("xlink:href", "wedding-rings.jpg")
 
    
 // Scale the circles
@@ -81,7 +81,7 @@ function successHandle(marriageData){
         return radiusScale(d.rate);
     })
     .attr("fill", function(d){
-        return "url(#" + d.state + ")"
+        return "url(#wedding-rings)"
     })
     .on('click', function(d){
         toolTip.show(d, event.target)
@@ -94,9 +94,7 @@ function successHandle(marriageData){
     .data(marriageData)
     .enter().append("pattern")
     .attr("class", "state-flower-pattern")
-    .attr("id", function(d) {
-        return d.state
-    })
+    .attr("id", "wedding-rings")
     .attr("height", "100%")
     .attr("width", "100%")
     .attr("patternContentUnits", "objectBoundingBox")
@@ -105,9 +103,7 @@ function successHandle(marriageData){
     .attr("width", 1)
     .attr("preserveAspectRatio", "none")
     .attr("xmlns:xlink", "http://www.w3.org/1999/xlink")
-    .attr("xlink:href", function (d){
-        return d.image_path
-    })
+    .attr("xlink:href", "wedding-rings.jpg")
 
     simulation.nodes(marriageData)
     .on('tick', ticked)
