@@ -1,46 +1,52 @@
 state,rate,party
-Alabama,3.8,republican
-Alaska,3.9,republican
-Arizona,3.4,republican
-Arkansas,3.9,republican
-Colorado,3.6,democrat
-Connecticut,3.2,democrat
-Delaware,3.1,democrat
-Washington D.C.,2.7,democrat
-Florida,3.9,republican
-Idaho,4,republican
-Illinois,2,democrat
-Iowa,1.3,republican
-Kansas,2.7,republican
-Kentucky,3.8,republican
-Louisiana,2,republican
-Maine,3.4,democrat
-Maryland,2.7,democrat
-Massachusetts,2.3,democrat
-Michigan,2.9,republican
-Mississippi,3.2,republican
-Missouri,3.3,republican
-Montana,3.1,republican
-Nebraska,3.1,republican
-Nevada,4.3,democrat
-New Hampshire,3.4,democrat
-New Jersey,2.7,democrat
-New York,2.7,democrat
-North Carolina,3.2,republican
-North Dakota,2.6,republican
-Ohio,3,republican
-Oklahoma,4.4,republican
-Oregon,3.4,democrat
-Pennsylvania,2.6,republican
-Rhode Island,2.8,democrat
-South Carolina,2.5,republican
-South Dakota,2.8,republican
-Tennessee,3.8,republican
-Texas,4.2,republican
-Utah,3.6,republican
-Vermont,3.1,democrat
-Virginia,3.4,democrat
-Washington,3.5,democrat
-West Virginia,3.8,republican
-Wisconsin,2.6,republican
-Wyoming,4.2,republican
+Alabama,7.1,republican
+Alaska,7.1,republican
+Arizona,5.9,republican
+Arkansas,9.9,republican
+California,6.5,democrat
+Colorado,7.4,democrat
+Connecticut,5.6,democrat
+Delaware,5.6,democrat
+Washington D.C.,8.1,democrat
+Florida,8.1,republican
+Georgia,6.8,republican
+Hawaii,15.6,democrat
+Idaho,8.1,republican
+Illinois,5.4,democrat
+Indiana,6.9,republican
+Iowa,6.1,republican
+Kansas,6.2,republican
+Kentucky,7.4,republican
+Louisiana,6.1,republican
+Maine,7.6,democrat
+Maryland,6.3,democrat
+Massachusetts,5.8,democrat
+Michigan,5.9,republican
+Minnesota,5.6,democrat
+Mississippi,7,republican
+Missouri,6.9,republican
+Montana,7.8,republican
+Nebraska,6.5,republican
+Nevada,28.4,democrat
+New Hampshire,7,democrat
+New Jersey,5.7,democrat
+New Mexico,6.4,democrat
+New York,7.5,democrat
+North Carolina,7,republican
+North Dakota,6,republican
+Ohio,6,republican
+Oklahoma,6.7,republican
+Oregon,6.9,democrat
+Pennsylvania,5.8,republican
+Rhode Island,6.7,democrat
+South Carolina,6.6,republican
+South Dakota,7.2,republican
+Tennessee,8.6,republican
+Texas,7.1,republican
+Utah,9,republican
+Vermont,8.3,democrat
+Virginia,7,democrat
+Washington,6.2,democrat
+West Virginia,6.4,republican
+Wisconsin,5.6,republican
+Wyoming,7.1,republican

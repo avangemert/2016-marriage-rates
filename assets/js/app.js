@@ -23,7 +23,7 @@ var svg = d3.select("#bubble")
 var defs = svg.append("defs");
 
 defs.append("pattern")
-    .attr("id", "broken_heart")
+    .attr("id", "wedding-rings")
     .attr("height", "100%")
     .attr("width", "100%")
     .attr("patternContentUnits", "objectBoundingBox")
@@ -32,7 +32,7 @@ defs.append("pattern")
     .attr("width", 1)
     .attr("preserveAspectRatio", "none")
     .attr("xmlns:xlink", "http://www.w3.org/1999/xlink")
-    .attr("xlink:href", "broken_heart.png")
+    .attr("xlink:href", "wedding-rings.jpg")
 
    
 // Scale the circles
